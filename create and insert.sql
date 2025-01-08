@@ -1,0 +1,20 @@
+create database kavi1;
+use kavi1;
+create table shcool(SID INT, SNAME varchar (50), EMAIL varchar (60), COURSE varchar (50));
+desc shcool;
+insert into shcool values(1,"a","a@gmail.com","skyllx");
+insert into shcool values(2,"b","b@gmail.com","skyllx");
+insert into shcool values(3,"c","c@gmail.com","skyllx");
+insert into shcool values(4,"d","d@gmail.com","skyllx");
+insert into shcool values(5,"e","e@gmail.com","skyllx");
+insert into shcool values(6,"f","f@gmail.com","skyllx");
+
+select *from shcool;
+alter table shcool add address varchar(40);
+select *from shcool;
+alter table shcool add clg varchar(30) default "vmsrv";
+desc shcool;
+alter table shcool drop column address;
+select *from shcool;
+update shcool set course = "b.com" where clg = "vmsrv";
+select *from shcool;
